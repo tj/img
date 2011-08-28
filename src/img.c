@@ -81,7 +81,7 @@ output_css_dimensions(int width, int height) {
  */
 
 void
-read_range(const char *path, char *buf, int len, int offset) {
+read_from(const char *path, char *buf, int len, int offset) {
   // open file
   int fd = open(path, O_RDONLY);
   if (fd < 0) {
@@ -104,7 +104,7 @@ read_range(const char *path, char *buf, int len, int offset) {
 void
 output_gif_dimensions(const char *path) {
   char buf[4];
-  read_range(path, buf, 4, 6);
+  read_from(path, buf, 4, 6);
   output_css_dimensions(
       read_uint16(buf)
     , read_uint16(buf + 2));
@@ -118,7 +118,7 @@ void
 output_png_dimensions(const char *path) {
   // read bytes
   char buf[8];
-  read_range(path, buf, 8, 16);
+  read_from(path, buf, 8, 16);
   int width = read_uint32(buf)
     , height = read_uint32(buf+4);
 
