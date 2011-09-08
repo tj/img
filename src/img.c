@@ -51,9 +51,9 @@ is_png(uint8_t *buf) {
 int
 read_uint32(char *buf) {
   return buf[0] << 24
-    | buf[1] << 16
-    | buf[2] << 8
-    | buf[3];
+      | buf[1] << 16
+      | buf[2] << 8
+      | buf[3] & 0xff;
 }
 
 /*
