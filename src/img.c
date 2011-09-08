@@ -15,7 +15,7 @@
  * Program version.
  */
 
-#define VERSION "0.0.1"
+#define VERSION "0.0.2"
 
 /*
  * Sniff bytes for JPEG's magic number ff d8.
