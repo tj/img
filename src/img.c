@@ -119,9 +119,6 @@ output_png_dimensions(const char *path) {
   // read bytes
   char buf[8];
   read_from(path, buf, 8, 16);
-  int width = read_uint32(buf)
-    , height = read_uint32(buf+4);
-
   output_css_dimensions(
       read_uint32(buf)
     , read_uint32(buf + 4));
