@@ -49,11 +49,11 @@ is_png(uint8_t *buf) {
  */
 
 int
-read_uint32(char *buf) {
+read_uint32(uint8_t *buf) {
   return buf[0] << 24
       | buf[1] << 16
       | buf[2] << 8
-      | buf[3] & 0xff;
+      | buf[3];
 }
 
 /*
@@ -61,7 +61,7 @@ read_uint32(char *buf) {
  */
 
 int
-read_uint16(char *buf) {
+read_uint16(uint8_t *buf) {
   return buf[1] << 8
     | buf[0];
 }
