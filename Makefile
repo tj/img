@@ -16,9 +16,11 @@ uninstall:
 test:
 	@echo PNG
 	@./img test/firefox.png
+	@./img test/apple.png
 	@echo
 	@echo GIF
 	@./img test/puffer.gif
+	@./img test/google.gif
 	@echo
 	@echo JPEG
 	@./img test/jpeg
