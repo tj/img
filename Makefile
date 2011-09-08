@@ -17,6 +17,7 @@ test:
 	@echo PNG
 	@./img test/firefox.png
 	@./img test/apple.png
+	@./img test/tux.png
 	@echo
 	@echo GIF
 	@./img test/puffer.gif
